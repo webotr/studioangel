@@ -1,47 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Home</title>
-    <link rel="stylesheet" href="mystyle.css">
-  </head>
-  <body>
 
-    <!-- define the wrapper and the container -->
-    <div data-barba="wrapper">
-      <div data-barba="container" data-barba-namespace="page-a">
-        <div class="content">
-          <div class="blue">
-            <h1>Home</h1>
-            <a href="page2.html">Page 2</a>
-                  </div>
-          </div>
+<head>
+  <meta charset="utf-8">
+  <title>Home</title>
+  <link rel="stylesheet" href="mystyle.css">
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+
+  <!-- define the wrapper and the container -->
+  <div data-barba="wrapper">
+    <div data-barba="container" data-barba-namespace="page-a">
+      <div class="content">
+        <div class="menu">
+          <a href="page2.html">Page 2</a>
         </div>
+        <div class="title">
+          <h1>Angel Studio</h1>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <!-- load barba (UMD version) -->
-    <script src="https://unpkg.com/@barba/core"></script>
+  <!-- load barba (UMD version) -->
+  <script src="https://unpkg.com/@barba/core"></script>
 
-    <!-- load gsap animation library (minified version) -->
-    <script src="https://unpkg.com/gsap@latest/dist/gsap.min.js"></script>
+  <!-- load gsap animation library (minified version) -->
+  <script src="https://unpkg.com/gsap@latest/dist/gsap.min.js"></script>
 
-    <!-- init barba with a simple opacity transition -->
-    <script type="text/javascript">
-      barba.init({
-        transitions: [{
-          name: 'opacity-transition',
-          leave(data) {
-            return gsap.to(data.current.container, {
-              rotation: 27, x: 100, duration: 1, ease: "elastic"
-            });
-          },
-          enter(data) {
-            return gsap.from(data.next.container, {
-              rotation: 360, x: 100, duration: 1, ease: "elastic"
-            });
-          }
-        }]
-      });
-    </script>
-  </body>
+  <!-- init barba with a simple opacity transition -->
+  <script type="text/javascript">
+    barba.init({
+      transitions: [{
+        name: 'opacity-transition',
+        leave(data) {
+          return gsap.to(data.current.container, {
+            // rotation: 27, x: 100, duration: 1, ease: "elastic"
+            opacity: 0
+          });
+        },
+        enter(data) {
+          return gsap.from(data.next.container, {
+            // rotation: 360, x: 100, duration: 1, ease: "elastic"
+            opacity: 0
+          });
+        }
+      }]
+    });
+  </script>
+</body>
+
 </html>
