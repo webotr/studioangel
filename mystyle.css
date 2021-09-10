@@ -6,14 +6,25 @@ body {
     height: 100vh;
 }
 
+p {
+    font-size: 30px;
+    color: #b3b3b3;
+}
+
 .content {
     margin: auto;
     width:800px;
 }
 
+.box {
+    text-align: center;
+    padding:100px;
+}
+
 .title {
     text-align: center;
     text-transform: uppercase;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 h1 {
