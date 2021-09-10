@@ -11,12 +11,25 @@ p {
     color: #b3b3b3;
 }
 
+.menu {
+    height:100px;
+    position:absolute;
+    top:0px;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #b3b3b3;
+}
+
 .content {
     margin: auto;
     width:800px;
 }
 
 .box {
+    height:300px;
     text-align: center;
     padding:100px;
 }
