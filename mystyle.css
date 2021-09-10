@@ -1,8 +1,9 @@
 body {
-    background-image: url("pastelbg1.jpg");
-    background-repeat:repeat;
+    background: rgb(255,255,255);
+    background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(255,251,213,1) 44%, rgba(209,247,255,1) 100%);
     font-family: 'Marcellus', serif;
     color:white;
+    height: 100vh;
 }
 
 .content {
